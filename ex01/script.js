@@ -8,15 +8,19 @@ function load(){
     let minutes = date.getMinutes()
     msg.innerHTML = `Agora são ${hour} horas e ${minutes} minutos.`
 
+
     if(hour >= 0 && hour < 12){
         //Bom dia
         image.src = 'img/manha.png'
-    }else if (hour >=12 && hour < 18){
+        document.body.style.background = '#e2cd9f'
+    }else if (hour >=12 && hour <= 18){
         //Boa tarde
         image.src = 'img/tarde.jpg'
+        document.body.style.background = '#b9846f'
     }else {
-        image.src = 'img/noite.jpg'
         //Boa noite
+        image.src = 'img/noite.jpg'
+        document.body.style.background = '#515154'
     }
 
     
